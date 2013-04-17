@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Table To Csv Test Suite</title>
+  <!-- Load local jQuery. This can be overridden with a ?jquery=___ param. -->
+  <script src="../libs/jquery-loader.js"></script>
+  <!-- Load local QUnit (grunt requires v1.0.0 or newer). -->
+  <link rel="stylesheet" href="../libs/qunit/qunit.css" media="screen">
+  <script src="../libs/qunit/qunit.js"></script>
+  <!-- Load local lib and tests. -->
+  <script src="../src/table-to-csv.js"></script>
+  <script src="table-to-csv_test.js"></script>
+  <!-- Removing access to jQuery and $. But it'll still be available as _$, if
+       you REALLY want to mess around with jQuery in the console. REMEMBER WE
+       ARE TESTING YOUR PLUGIN HERE -->
+  <script>window._$ = jQuery.noConflict(true);</script>
+</head>
+<body>
+  <h1 id="qunit-header">Table To Csv Test Suite</h1>
+  <h2 id="qunit-banner"></h2>
+  <div id="qunit-testrunner-toolbar"></div>
+  <h2 id="qunit-userAgent"></h2>
+  <ol id="qunit-tests"></ol>
+  <div id="qunit-fixture">
+
+    <table id="test-table">
+      <thead><tr><th style="width: 20%"></th><!-- months go here --><th class="period money narrow historical-month" data-original-title="Click to expand" style="width: 9.75%; "><div class="table-cell-wrapper">
+              Sep
+            </div>
+              </th><th class="period money narrow current-month" data-original-title="Click to expand" style="width: 9.75%; "><div class="table-cell-wrapper">
+              Oct
+            </div>
+              </th><th class="period money narrow" data-original-title="Click to expand" style="width: 9.75%; "><div class="table-cell-wrapper">
+              Nov
+            </div>
+              </th><th class="period money narrow" data-original-title="Click to expand" style="width: 9.75%; "><div class="table-cell-wrapper">
+              Dec
+            </div>
+              </th><th class="period money narrow" data-original-title="Click to expand" style="width: 9.75%; "><div class="table-cell-wrapper">
+              Jan '13
+            </div>
+              </th><th class="period money narrow" data-original-title="Click to expand" style="width: 9.75%; "><div class="table-cell-wrapper">
+              Feb
+            </div>
+              </th><th class="period money narrow" data-original-title="Click to expand" style="width: 9.75%; "><div class="table-cell-wrapper">
+              Mar
+            </div>
+              </th><th class="period money narrow" data-original-title="Click to expand" style="width: 9.75%; "><div class="table-cell-wrapper">
+              Apr
+            </div>
+      </th><th class="include" style="width: 3%"></th></tr></thead>
+
+      <tbody class="start_balances"><tr id="node-start_balance" class="initialized"><td>Starting Balance</td><td class="period money">-2,402.20</td><td class="period money">-2,402.20</td><td class="period money"> 8,636.89</td><td class="period money"> 12,776.89</td><td class="period money"> 16,916.89</td><td class="period money"> 21,056.89</td><td class="period money"> 25,196.89</td><td class="period money"> 29,336.89</td></tr></tbody>
+      <tbody class="spacer"><tr class="initialized"><td></td></tr></tbody>
+
+      <tbody class="inflow"><tr id="node-income" class="initialized parent expanded"><td style="cursor: pointer; "><span style="padding-left: 15px" class="expander"></span>Cash In</td><td class="period money"> 0.00</td><td class="period money"> 13,645.60</td><td class="period money"> 5,000.00</td><td class="period money"> 5,000.00</td><td class="period money"> 5,000.00</td><td class="period money"> 5,000.00</td><td class="period money"> 5,000.00</td><td class="period money"> 5,000.00</td></tr><tr class="child-of-node-income initialized" id="cashflow-set-57"><!-- Template: backbone/templates/cashflow_sets/cashflow_set --><td class="description" scope="rowgroup">
+            <div class="table-cell-wrapper">
+              <a class="edit">Sales</a>
+            </div>
+          </td>
+          <td class="period money historical-month"><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">13,546</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">5,000</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">5,000</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">5,000</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">5,000</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">5,000</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">5,000</div>
+
+            </div>
+            </td><td class="include">
+            <input type="checkbox" value="1" class="included" checked="checked">
+          </td>
+            </tr><tr class="child-of-node-income initialized" id="cashflow-set-income"><!-- Template: backbone/templates/cashflow_sets/misc/cashflow_set --><td class="description" scope="rowgroup">
+            Misc Income
+          </td>
+          <td class="period money historical-month"><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">100</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+            </td><td class="include">
+            <input type="checkbox" value="1" class="included" checked="checked">
+          </td>
+      </tr></tbody>
+      <tbody class="spacer"><tr class="initialized"><td></td></tr></tbody>
+
+      <tbody class="outflow"><tr id="node-expense" class="initialized parent expanded"><td style="cursor: pointer; "><span style="padding-left: 15px" class="expander"></span>Cash Out</td><td class="period money"> 0.00</td><td class="period money">-2,606.51</td><td class="period money">-860.00</td><td class="period money">-860.00</td><td class="period money">-860.00</td><td class="period money">-860.00</td><td class="period money">-860.00</td><td class="period money">-860.00</td></tr><tr class="child-of-node-expense initialized" id="cashflow-set-56"><!-- Template: backbone/templates/cashflow_sets/cashflow_set --><td class="description" scope="rowgroup">
+            <div class="table-cell-wrapper">
+              <a class="edit">Rent</a>
+            </div>
+          </td>
+          <td class="period money historical-month"><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">860</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">860</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">860</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">860</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">860</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">860</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">860</div>
+
+            </div>
+            </td><td class="include">
+            <input type="checkbox" value="1" class="included" checked="checked">
+          </td>
+            </tr><tr class="child-of-node-expense initialized" id="cashflow-set-expense"><!-- Template: backbone/templates/cashflow_sets/misc/cashflow_set --><td class="description" scope="rowgroup">
+            Misc Expenses
+          </td>
+          <td class="period money historical-month"><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">1,747</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value">0</div>
+
+            </div>
+            </td><td class="include">
+            <input type="checkbox" value="1" class="included" checked="checked">
+          </td>
+      </tr></tbody>
+      <tbody class="spacer"><tr class="initialized"><td></td></tr></tbody>
+
+      <tbody class="transfers"><tr id="node-transfers" class="initialized parent expanded"><td style="cursor: pointer; "><span style="padding-left: 15px" class="expander"></span>Net Transfers</td><td class="period money"> 0.00</td><td class="period money"> 0.00</td><td class="period money"> 0.00</td><td class="period money"> 0.00</td><td class="period money"> 0.00</td><td class="period money"> 0.00</td><td class="period money"> 0.00</td><td class="period money"> 0.00</td></tr><tr class="child-of-node-transfers initialized" id="cashflow-set-bank-account-62"><!-- Template: backbone/templates/cashflow_sets/transfer/cashflow_set --><td class="description" scope="rowgroup">
+            Current Account
+          </td>
+          <td class="period money historical-month"><div class="table-cell-wrapper">
+
+
+
+              <div class="value"> 0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value"> 0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value"> 0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value"> 0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value"> 0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value"> 0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value"> 0</div>
+
+            </div>
+              </td><td class="period money "><div class="table-cell-wrapper">
+
+
+
+              <div class="value"> 0</div>
+
+            </div>
+            </td><td class="include">
+            <input type="checkbox" value="1" class="included" checked="checked">
+          </td>
+      </tr></tbody>
+      <tbody class="spacer"><tr class="initialized"><td></td></tr></tbody>
+
+      <tbody class="summary"><tr id="node-difference" class="initialized"><td>Difference</td><td class="period money"> 0.00</td><td class="period money"> 11,039.09</td><td class="period money"> 4,140.00</td><td class="period money"> 4,140.00</td><td class="period money"> 4,140.00</td><td class="period money"> 4,140.00</td><td class="period money"> 4,140.00</td><td class="period money"> 4,140.00</td></tr></tbody>
+      <tbody class="spacer"><tr class="initialized"><td></td></tr></tbody>
+
+      <tbody class="end_balances">
+        <tr id="node-end_balance" class="initialized"><td>Ending Balance</td><td class="period money">-2,402.20</td><td class="period money"> 8,636.89</td><td class="period money"> 12,776.89</td><td class="period money"> 16,916.89</td><td class="period money"> 21,056.89</td><td class="period money"> 25,196.89</td><td class="period money"> 29,336.89</td><td class="period money"> 33,476.89</td></tr></tbody>
+
+    </table>
+
+
+  </div>
+</body>
+</html>

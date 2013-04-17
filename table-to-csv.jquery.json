@@ -1,0 +1,28 @@
+{
+  "name": "table-to-csv",
+  "title": "Table To Csv",
+  "description": "Converts tables to csv",
+  "version": "0.1.0",
+  "homepage": "https://github.com/latentflip/table-to-csv",
+  "author": {
+    "name": "Philip Roberts",
+    "email": "phil@floatapp.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/latentflip/table-to-csv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/latentflip/table-to-csv/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/latentflip/table-to-csv/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}
