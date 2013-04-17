@@ -1,6 +1,6 @@
-/*! Table To Csv - v0.1.0 - 2012-10-05
+/*! Table To Csv - v0.1.0 - 2013-04-17
 * https://github.com/latentflip/table-to-csv
-* Copyright (c) 2012 Philip Roberts; Licensed MIT */
+* Copyright (c) 2013 Philip Roberts; Licensed MIT */
 
 /*
   * options:
@@ -51,6 +51,14 @@
 
       }).get().join(',');
     }).get();
+
+    if (options.header) {
+      var header = options.header.map(function(r) {
+        return r.join(',');
+      });
+      header.push("");
+      csv = header.concat(csv);
+    }
 
     return csv;
   }

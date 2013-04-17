@@ -55,6 +55,14 @@
       }).get().join(',');
     }).get();
 
+    if (options.header) {
+      var header = options.header.map(function(r) {
+        return r.join(',');
+      });
+      header.push("");
+      csv = header.concat(csv);
+    }
+
     return csv;
   }
 

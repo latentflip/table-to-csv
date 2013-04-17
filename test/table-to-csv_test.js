@@ -33,7 +33,7 @@
     strictEqual(this.elems.tableToCSV(), this.elems, 'should be chaninable');
   });
 
-  test('returns csv', 4, function() {
+  test('returns csv', 7, function() {
     this.elems.tableToCSV({
       currency: 'td.money',
       currencyInvert: 'tbody.outflow td.money',
@@ -43,17 +43,25 @@
           selector: "tr[class^=child-of-node] td.description",
           prepend: " - "
         }
+      ],
+      header: [
+        ['"Float cashflow"'],
+        ['"exported just now"']
       ]
     }, function(csvs) {
       var csv = csvs[0];
 
-      strictEqual(csv[0], ",Sep,Oct,Nov,Dec,Jan '13,Feb,Mar,Apr,", "header rows should be correct");
+      strictEqual(csv[0], '"Float cashflow"');
+      strictEqual(csv[1], '"exported just now"');
+      strictEqual(csv[2], "", "title should be added with seperator");
 
-      strictEqual(csv[1], "Starting Balance,-2402.20,-2402.20,8636.89,12776.89,16916.89,21056.89,25196.89,29336.89", "starting balance should be correct");
+      strictEqual(csv[3], ",Sep,Oct,Nov,Dec,Jan '13,Feb,Mar,Apr,", "header rows should be correct");
 
-      strictEqual(csv[8], " - Rent,0.00,-860.00,-860.00,-860.00,-860.00,-860.00,-860.00,-860.00,", "starting balance should be correct");
+      strictEqual(csv[4], "Starting Balance,-2402.20,-2402.20,8636.89,12776.89,16916.89,21056.89,25196.89,29336.89", "starting balance should be correct");
+
+      strictEqual(csv[11], " - Rent,0.00,-860.00,-860.00,-860.00,-860.00,-860.00,-860.00,-860.00,", "starting balance should be correct");
       
-      strictEqual(csv[3], "Cash In,,,,,,,,", "Header row cells should be ignored");
+      strictEqual(csv[6], "Cash In,,,,,,,,", "Header row cells should be ignored");
     });
   });
 
